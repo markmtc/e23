@@ -3,11 +3,11 @@
 internal class Helper
 {
     public static Dictionary<int, Ficha> Fichas { set; get; }
-    public static Dictionary<uint, Ficha> Mapa { get; set; }
+    public static SortedDictionary<uint, Ficha> Mapa { get; set; }
     internal static void cargamapa()
     {
         Fichas = new Dictionary<int, Ficha>();
-        Mapa = new Dictionary<uint, Ficha>();
+        Mapa = new SortedDictionary<uint, Ficha>();
         var texto = File.ReadAllLines("fichas.txt");
         for (int i = 0; i < texto.Length; i++)
         {
