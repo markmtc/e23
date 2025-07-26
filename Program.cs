@@ -1,9 +1,5 @@
-﻿
-
-
-using e23;
+﻿using e23;
 using System.Data;
-
 
 Helper.cargamapa();
 
@@ -27,3 +23,7 @@ for (int i = 0; i < 32; i++)
 
 
 Tablero = Tablero;
+
+
+ Mapa = Helper.Mapa;
+ fichas = Helper.Fichas;
