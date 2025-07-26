@@ -9,12 +9,21 @@ Helper.cargamapa();
 
 
 
-UInt32[,] Tablero = new UInt32[16, 16];
+byte[,] Tablero = new byte[32, 32];
 
-for (int i = 0; i < 16; i++)
+for (int i = 0; i < 32; i++)
 {
-    for (int j = 0; j < 16; j++)
+    for (int j = 0; j < 32; j++)
     {
-        Tablero[i, j] = 0;
+        if (i + j < 15) 
+            Tablero[i, j] = (byte)255;
+        if (j - i > 16 && j-i > 0)
+            Tablero[i, j] = (byte)255;
+
     }
 }
+
+
+
+
+Tablero = Tablero;
